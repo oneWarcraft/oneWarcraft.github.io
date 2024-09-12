@@ -12,8 +12,8 @@
     <script type="text/javascript">
         // 在页面加载 10 秒后发送消息
         setTimeout(function() {
-            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.operationBindAttriumCardComplete) {
-                window.webkit.messageHandlers.operationBindAttriumCardComplete.postMessage({
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.atriumCardMsg) {
+                window.webkit.messageHandlers.atriumCardMsg.postMessage({
                     status: '200',
                     message: '操作成功'
                 });
