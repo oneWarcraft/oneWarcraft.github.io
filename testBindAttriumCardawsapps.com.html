@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Test</title>
+</head>
+<body>
+    <h1>测试网页</h1>
+    <p>5秒后将发送消息到 WebView</p>
+
+    <script type="text/javascript">
+        // 在页面加载 10 秒后发送消息
+        setTimeout(function() {
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.atriumCardMsg) {
+                window.webkit.messageHandlers.atriumCardMsg.postMessage({
+                    status: '200',
+                    message: '绑卡成功！！！'
+                });
+            } else {
+                console.log("WebKit message handler not found.");
+            }
+        }, 5000); // 10秒
+    </script>
+</body>
+</html>
