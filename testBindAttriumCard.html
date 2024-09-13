@@ -7,15 +7,15 @@
 </head>
 <body>
     <h1>测试网页</h1>
-    <p>10秒后将发送消息到 WebView</p>
+    <p>5秒后将发送消息到 WebView</p>
 
     <script type="text/javascript">
         // 在页面加载 10 秒后发送消息
         setTimeout(function() {
             if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.atriumCardMsg) {
                 window.webkit.messageHandlers.atriumCardMsg.postMessage({
-                    status: '400',
-                    message: '绑卡失败112345,23urodslhjfa;lvjhasjl'
+                    status: '200',
+                    message: '绑卡成功！！！'
                 });
             } else {
                 console.log("WebKit message handler not found.");
